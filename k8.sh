@@ -1,4 +1,4 @@
-
+sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt install docker.io -y
 sudo systemctl enable docker
 sudo apt install curl -y
