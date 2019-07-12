@@ -1,0 +1,26 @@
+#
+wget -N https://raw.githubusercontent.com/chrise01/Kubernetes-1/master/k8.sh
+chmod -x ./k8.sh
+#maybe update and snap 1st.
+bash ./k8.sh
+
+after the main install script
+#
+#
+#
+#used to join nodes
+#kubeadm join 192.168.100.6:6443 --token 06tl4c.oqn35jzecidg0r0m --discovery-token-ca-cert-hash sha256:c40f5fa0aba6ba311efcdb0e8cb637ae0eb8ce27b7a03d47be6d966142f2204c
+
+#used to view cluser
+kubectl get nodes
+##
+
+# current cluster
+kubeadm join 192.168.218.200:6443 --token p0uexr.sd008mt4c94n73l6 \
+    --discovery-token-ca-cert-hash sha256:d962f020b92f0d4078ebe0bed91a339791e33aeaeaef68742cae4c4c370da00c
+
+#
+#Used to start cluster
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config

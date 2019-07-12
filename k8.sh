@@ -1,4 +1,6 @@
-sudo apt-get update -y && sudo apt-get upgrade -y
+sudo apt-get update -y
+#leave this off unless you want an OS upgrade
+#sudo apt-get upgrade -y
 sudo apt install docker.io -y
 sudo systemctl enable docker
 sudo apt install curl -y
@@ -13,6 +15,6 @@ sudo hostnamectl set-hostname master-node
 #hostnamectl set-hostname slave-node
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 #What next?
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+#mkdir -p $HOME/.kube
+#sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+#sudo chown $(id -u):$(id -g) $HOME/.kube/config
