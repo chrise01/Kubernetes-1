@@ -1,3 +1,6 @@
+#turns off auto update to stop the dpk file lock issue
+#sudo systemctl disable --now apt-daily{,-upgrade}.{timer,service}
+sudo apt-get autoclean
 sudo apt-get update -y && sudo apt-get upgrade -y
 #leave this off unless you want an OS upgrade
 #sudo apt-get upgrade -y
