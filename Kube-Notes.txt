@@ -1,8 +1,14 @@
-#
+#MASTER
 wget -N https://raw.githubusercontent.com/chrise01/Kubernetes-1/master/k8.sh
 chmod -x ./k8.sh
 #maybe update and snap 1st.
 bash ./k8.sh
+
+#slave
+wget -N https://raw.githubusercontent.com/chrise01/Kubernetes-1/master/k8-Slave.sh
+chmod -x ./k8-Slave.sh
+#maybe update and snap 1st.
+bash ./k8-Slave.sh
 
 after the main install script
 #
@@ -16,11 +22,28 @@ kubectl get nodes
 ##
 
 # current cluster
-kubeadm join 192.168.218.200:6443 --token p0uexr.sd008mt4c94n73l6 \
-    --discovery-token-ca-cert-hash sha256:d962f020b92f0d4078ebe0bed91a339791e33aeaeaef68742cae4c4c370da00c
+sudo kubeadm join 192.168.218.200:6443 --token 1w4d59.kxjvysldyum2t8sx \
+    --discovery-token-ca-cert-hash sha256:74865c7d55e7b711e319ed73b54e92d9bc86e07084eaa8ef7898cb8f6dd26108
 
 #
 #Used to start cluster
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+#pod networking
+sudo kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+#View network status
+kubectl get pods --all-namespaces
+sudo kubectl get nodes
+
+##ADD SLave at this point
+
+#Dashboard on master
+sudo kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta1/aio/deploy/recommended.yaml
+kubectl proxy
+
+
+####
+#NGIX Example
+sudo kubectl apply -f https://k8s.io/examples/application/deployment.yaml
