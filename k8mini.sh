@@ -14,7 +14,9 @@ sudo snap install kubectl --classic
 
 
 ##sudo apt-get install -y kubectl - no longer works?
-sudo snap install minikube
+sudo apt install curl
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+
 ##
 #wget -N minikube https://storage.googleapis.com/minikube/releases/v0.28.2/minikube-linux-amd64
 #chmod +x minikube && sudo mv minikube /usr/local/bin/
