@@ -6,3 +6,8 @@
 wget -N https://raw.githubusercontent.com/chrise01/Kubernetes-1/master/k8mini.sh
 chmod -x ./k8mini.sh
 sudo bash ./k8mini.sh
+###
+
+sudo apt install curl
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube && sudo mv minikube /usr/local/bin/
+
