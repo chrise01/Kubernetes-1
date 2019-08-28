@@ -1,6 +1,6 @@
-wget -N https://raw.githubusercontent.com/chrise01/Kubernetes-1/master/k8mini.sh
-chmod -x ./k8mini.sh
-sudo bash ./k8mini.sh
+##wget -N https://raw.githubusercontent.com/chrise01/Kubernetes-1/master/k8mini.sh
+##chmod -x ./k8mini.sh
+##sudo bash ./k8mini.sh
 ##
 sudo apt-get update
 sudo apt-get install -y apt-transport-https
