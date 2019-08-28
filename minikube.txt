@@ -1,5 +1,6 @@
 ##https://matthewpalmer.net/kubernetes-app-developer/articles/install-kubernetes-ubuntu-tutorial.html
 ##https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/
+##https://kubernetes.io/docs/tutorials/hello-minikube/
 ##
 ## - Mini K8 deployment on ubuntu
 ## cut n paste the following##
