@@ -1,8 +1,8 @@
 ##https://matthewpalmer.net/kubernetes-app-developer/articles/install-kubernetes-ubuntu-tutorial.html
-##https://matthewpalmer.net/kubernetes-app-developer/articles/install-kubernetes-ubuntu-tutorial.html
+##https://kubernetes.io/docs/tutorials/kubernetes-basics/create-cluster/cluster-interactive/
 ##
 ## - Mini K8 deployment on ubuntu
-##
+## cut n paste the following##
 wget -N https://raw.githubusercontent.com/chrise01/Kubernetes-1/master/k8mini.sh
 chmod -x ./k8mini.sh
 sudo bash ./k8mini.sh
