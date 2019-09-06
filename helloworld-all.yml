@@ -77,7 +77,7 @@ metadata:
   selfLink: /api/v1/namespaces/default/services/hw
   uid: 8ddb6362-a1f1-4265-8ebb-8b6b42287f64
 spec:
-  clusterIP: 10.111.147.205
+  clusterIP: 10.111.147.206
   externalTrafficPolicy: Cluster
   ports:
   - nodePort: 30144
