@@ -14,4 +14,21 @@ sudo install minikube /usr/local/bin
 minikube version
 minikube start
 virtualbox
+kubectl get nodes
+####
+kubectl run hw --image=karthequian/helloworld --port=80
+kubectl get deployments
+## ReplicaSets
+kubectl get rs
+kubectl get pods
+##
+kubectl expose deployment hw --type=NodePort
+kubectl get services
+## - displays app in browsers?
+minikube service hw
+## - shows pods, services, deployments and replicasets
+kubectl get all
+##
+## - yaml output of the hw deployment
+ kubectl get deployment/hw -o yaml
 
