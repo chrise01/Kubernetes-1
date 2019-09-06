@@ -1,3 +1,5 @@
+###running on a single ubuntu VM###
+###Make sure VT-x is running on hypervisor###
 sudo snap install docker
 sudo docker version
 sudo apt-get install curl -y
@@ -11,4 +13,5 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
 sudo install minikube /usr/local/bin
 minikube version
 minikube start
+virtualbox
 
