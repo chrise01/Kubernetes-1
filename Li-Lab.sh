@@ -32,5 +32,7 @@ kubectl get all
 ## - yaml output of the hw deployment
 kubectl get deployment/hw -o yaml
 kubectl get services/hw -o yaml
-### combine the 2 yaml into a single yml file - use "---" to seperate deployment vs services sections?
+### combine the 2 yaml into a single yml file - use "---" to seperate deployment vs services sections? - change IP and port and names?
+### kubectl delete -f helloworld-all.yml
+
 
