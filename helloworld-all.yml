@@ -6,8 +6,8 @@ metadata:
   creationTimestamp: "2019-09-06T04:34:18Z"
   generation: 1
   labels:
-    run: hw
-  name: hw
+    run: hellowworld
+  name: helloworld-all-deployment
   namespace: default
   resourceVersion: "1547"
   selfLink: /apis/extensions/v1beta1/namespaces/default/deployments/hw
@@ -18,7 +18,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      run: hw
+      run: helloworld
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -28,12 +28,12 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        run: hw
+        run: helloworld
     spec:
       containers:
       - image: karthequian/helloworld
         imagePullPolicy: Always
-        name: hw
+        name: helloworld
         ports:
         - containerPort: 80
           protocol: TCP
@@ -70,8 +70,8 @@ kind: Service
 metadata:
   creationTimestamp: "2019-09-06T04:36:55Z"
   labels:
-    run: hw
-  name: hw
+    run: helloworld
+  name: helloworld-all-service
   namespace: default
   resourceVersion: "1706"
   selfLink: /api/v1/namespaces/default/services/hw
@@ -85,7 +85,7 @@ spec:
     protocol: TCP
     targetPort: 80
   selector:
-    run: hw
+    run: helloworld
   sessionAffinity: None
   type: NodePort
 status:
